@@ -9,6 +9,7 @@ header {
   /* 下の区切り線を紫に */
   align-items: center;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
 .title {
@@ -49,6 +50,12 @@ header {
   /* ホバー時の背景色 */
 }
 
+.Main-Image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -57,95 +64,65 @@ body {
   background: linear-gradient(to bottom, rgba(152, 233, 209, 1) 33%, rgba(229, 162, 255, 1));
   background-attachment: fixed;
   /* スクロールしても背景を固定 */
+  overflow-x: hidden;
 }
 
-.container {
+.image-container {
   position: relative;
-  width: 2500px;
-  height: 1000px;
-  margin: auto;
-  background-image: url('widemoniter.PNG');
-  /* 背景画像 */
-  background-size: cover;
-  background-position: center;
+
+  width: 100%;
+  /* 適宜調整 */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* 水平方向（左右）中央揃え */
+  align-items: center;
+  /* 垂直方向（上下）中央揃え */
+
 }
 
 .main-image {
+  width: 100%;
+  height: 80%;
+  right: 50%;
+}
+
+.overlay-image {
   position: absolute;
-  top: 88%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 32%;
-  /* 調整可能 */
+  width: 100px;
+  /* 重ねる画像のサイズ */
   height: auto;
 }
 
-.overlay {
+.arrow {
   position: absolute;
   top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   transform: translateY(-50%);
-}
-
-.arrow {
-  background: none;
-  border: none;
-  width: 0;
-  height: 0;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  opacity: 0.8;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* 左矢印（三角形を左向きにする） */
-.arrow.left {
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-right: 50px solid purple;
-  /* 紫色の三角形 */
-  position: absolute;
-  left: 20px;
-  /* 画像の横に配置 */
+.left-arrow {
+  left: 500px;
 }
 
-/* 右矢印（三角形を右向きにする） */
-.arrow.right {
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 50px solid purple;
-  /* 紫色の三角形 */
-  position: absolute;
-  right: 20px;
-  /* 画像の横に配置 */
-}
-
-/* ホバー時のエフェクト（少し拡大 & 透明度アップ） */
-.arrow:hover {
-  transform: scale(1.2);
-  opacity: 1;
+.right-arrow {
+  right: 500px;
 }
 
 footer {
   border-top: 5px solid lightgreen;
 }
 
-#subContent {
-  background-image: url('syoukai.PNG') !important;
-  background-size: 60% !important;
-  background-repeat: no-repeat !important;
-  background-position: top center !important;
-  font-family: 'Arial', sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  background-attachment: fixed;
-}
-
 .teams {
   position: absolute;
-  left: 570px;
-  top: 200px;
+  left: 30%;
+  top: 320%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,8 +131,8 @@ footer {
 .team {
   cursor: pointer;
   padding: 5px;
-  margin: 5px 0;
-  font-size: 18px;
+  margin: 10px 0;
+  font-size: 25px;
   transition: transform 0.3s;
 }
 
@@ -167,15 +144,35 @@ footer {
   padding: 3px 10px;
 }
 
-.description {
+.introduce {
   position: absolute;
-  left: 250px;
-  top: 150px;
-  font-size: 18px;
+  left: 30%;
+  top: 305%;
+  transform: translateX(-50%);
+  font-size: 40px;
   width: 500px;
+  text-align: center;
+
 }
 
-.arrow {
+.description {
+  position: absolute;
+  left: 50%;
+  top: 320%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  width: 500px;
+  text-align: center;
+}
+
+.top-arrow {
+  cursor: pointer;
+  font-size: 24px;
+  color: skyblue;
+  user-select: none;
+}
+
+.bottom-arrow {
   cursor: pointer;
   font-size: 24px;
   color: skyblue;
