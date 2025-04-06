@@ -6,6 +6,8 @@
   <title>Header Sample</title>
   <link rel="stylesheet" href="main.css">
   <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -22,37 +24,33 @@
       </ul>
     </nav>
   </header>
-  <img src="fox小隊.png" alt="1920*1080" width="1980" height="1080" style="display: block; margin: auto;" />
+  <div class="Main-Image">
+    <img src="sumple.jpg" alt="1920*1080" style="display: block; margin: auto;" />
+
+  </div>
+  <div class="image-container">
+    <img id="mainImage" src="test1.png" class="overlay-image" alt="メイン画像">
+    <img src="widemoniter.PNG" class="main-image" alt="重ねた画像">
+    <img src="left-arrow.png" class="arrow left-arrow" onclick="changeImage(-1)" alt="左矢印">
+    <img src="right-arrow.png" class="arrow right-arrow" onclick="changeImage(1)" alt="右矢印">
+  </div>
+  <div class="teams" id="teamList">
+    <div class="top-arrow" onclick="moveSelection(-1)">▲</div>
+    <div class="team" onclick="selectTeam(0)">広報班</div>
+    <div class="team" onclick="selectTeam(1)">デザイン班</div>
+    <div class="team" onclick="selectTeam(2)">音楽班</div>
+    <div class="team" onclick="selectTeam(3)">映像編集班</div>
+    <div class="team" onclick="selectTeam(4)">モーション班</div>
+    <div class="team" onclick="selectTeam(5)">3DCG班</div>
+    <div class="team" onclick="selectTeam(6)">システム実装班</div>
+    <div class="bottom-arrow" onclick="moveSelection(1)">▼</div>
+  </div>
 
   <div class="container">
-    <div class="background"></div> <!-- 背景画像エリア -->
-    <img id="mainImage" class="main-image" src="test1.png" alt="表示画像">
-    <div class="overlay">
-      <button class="arrow left" onclick="prevImage()">&#9665;</button>
-      <button class="arrow right" onclick="nextImage()">&#9655;</button>
-    </div>
+    <h2 class="introduce">班紹介</h2>
+    <div class="description" id="description">班の紹介文がここに表示されます</div>
   </div>
-  <!--
-  <div id="subContent">
-    <div class="teams" id="teamList">
-      <div class="arrow" onclick="moveSelection(-1)">▲</div>
-      <div class="team" onclick="selectTeam(0)">広報班</div>
-      <div class="team" onclick="selectTeam(1)">デザイン班</div>
-      <div class="team" onclick="selectTeam(2)">音楽班</div>
-      <div class="team" onclick="selectTeam(3)">映像編集班</div>
-      <div class="team" onclick="selectTeam(4)">モーション班</div>
-      <div class="team" onclick="selectTeam(5)">3DCG班</div>
-      <div class="team" onclick="selectTeam(6)">システム実装班</div>
-      <div class="team" onclick="selectTeam(7)">ライブ演出研究班</div>
-      <div class="arrow" onclick="moveSelection(1)">▼</div>
-    </div>
-  
-    <div class="container">
-      <h2>班紹介</h2>
-      <div class="description" id="description">班の紹介文がここに表示されます</div>
-    </div>
-  </div>
--->
+
   <img src="syoukai.PNG" alt="1920*1080" width="1440" height="810" style="display: block; margin: auto;" />
   <img src="syoukai.PNG" alt="1920*1080" width="1440" height="810" style="display: block; margin: auto;" />
 </body>
