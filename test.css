@@ -42,8 +42,12 @@ header {
 }
 
 .background-img {
-  width: 100%;
+  width: 80%;
   height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  /* ← 追加！拡大画像と重ならないように下に余白 */
 }
 
 .image-container {
@@ -51,21 +55,35 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  justify-content: center;
 }
 
 .main-image {
   width: 100%;
+  max-width: 3600px;
+  /* 元画像サイズ */
   height: auto;
-
-
+  transform: scale(1.8);
+  /* 1.5倍拡大 */
+  transform-origin: center;
+  z-index: 0;
+  /* ← 背景に配置 */
+  position: relative;
+  /* ← z-indexを効かせるには必要 */
 }
 
 .overlay-image {
   position: absolute;
-  width: 100px;
+  width: 150px;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
+  /* ← 前面に配置！ */
 }
 
 .arrow {
@@ -98,23 +116,41 @@ header {
 }
 
 .teams {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  position: absolute;
+  /* 絶対位置で配置 */
+  top: 700%;
+  /* 画像の上部から20%の位置に設定（必要に応じて調整） */
+  left: 13%;
+  /* 画像の中央に配置 */
+  transform: translateX(-50%);
+  /* 中央寄せ */
+  z-index: 2;
+  /* 画像より上に表示 */
+
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  /* 幅調整 */
+  text-align: center;
 }
 
 .team {
-  font-size: 1.2rem;
-  margin: 0.3rem 0;
   cursor: pointer;
+  padding: 1.5rem;
+  margin: 10px 0;
+  font-size: 25px;
+  transition: transform 0.3s;
 }
 
 .selected {
+  font-size: 30px;
   font-weight: bold;
-  border: 2px solid purple;
-  padding: 0.3rem 0.5rem;
-  border-radius: 5px;
+  border: 3px solid purple;
+  display: inline-block;
+  padding: 0.2rem 1px;
+  /* 上下の余白を減らすためにpaddingを調整 */
+  line-height: 1.2;
+  /* 行の高さを小さくして、上下の余白を縮める */
 }
 
 .description-box {
@@ -141,12 +177,46 @@ header {
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  overflow: hidden;
+  /* ← 横にはみ出す部分を非表示にする */
 }
 
 .images img {
   width: 90%;
   max-width: 800px;
   height: auto;
+}
+
+.A {
+  width: 100%;
+  max-width: 3600px;
+  /* 元画像サイズ */
+  height: auto;
+  transform: scale(1.8);
+  /* 1.5倍拡大 */
+  transform-origin: center;
+  z-index: 0;
+  /* ← 背景に配置 */
+  position: relative;
+  /* ← z-indexを効かせるには必要 */
+  margin-bottom: 30rem;
+  /* ← 追加！拡大画像と重ならないように下に余白 */
+  margin-top: 30rem;
+}
+
+.B {
+  width: 100%;
+  max-width: 3600px;
+  /* 元画像サイズ */
+  height: auto;
+  transform: scale(1.8);
+  /* 1.5倍拡大 */
+  transform-origin: center;
+  z-index: 0;
+  /* ← 背景に配置 */
+  position: relative;
+  /* ← z-indexを効かせるには必要 */
+  margin-bottom: 30rem;
 }
 
 footer {
