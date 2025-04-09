@@ -47,7 +47,6 @@ header {
   display: block;
   margin: 0 auto;
   margin-bottom: 10rem;
-  /* ← 追加！拡大画像と重ならないように下に余白 */
 }
 
 .image-container {
@@ -64,15 +63,11 @@ header {
 .main-image {
   width: 100%;
   max-width: 3600px;
-  /* 元画像サイズ */
   height: auto;
   transform: scale(1.8);
-  /* 1.5倍拡大 */
   transform-origin: center;
   z-index: 0;
-  /* ← 背景に配置 */
   position: relative;
-  /* ← z-indexを効かせるには必要 */
 }
 
 .overlay-image {
@@ -83,7 +78,6 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  /* ← 前面に配置！ */
 }
 
 .arrow {
@@ -112,25 +106,17 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  /* ここで、アイテム間の隙間を調整 */
 }
 
 .teams {
   position: absolute;
-  /* 絶対位置で配置 */
-  top: 700%;
-  /* 画像の上部から20%の位置に設定（必要に応じて調整） */
+  top: 870%;
   left: 13%;
-  /* 画像の中央に配置 */
   transform: translateX(-50%);
-  /* 中央寄せ */
   z-index: 2;
-  /* 画像より上に表示 */
-
   padding: 1rem;
   border-radius: 8px;
   width: 80%;
-  /* 幅調整 */
   text-align: center;
 }
 
@@ -148,9 +134,7 @@ header {
   border: 3px solid purple;
   display: inline-block;
   padding: 0.2rem 1px;
-  /* 上下の余白を減らすためにpaddingを調整 */
   line-height: 1.2;
-  /* 行の高さを小さくして、上下の余白を縮める */
 }
 
 .description-box {
@@ -178,7 +162,6 @@ header {
   gap: 1rem;
   margin-top: 2rem;
   overflow: hidden;
-  /* ← 横にはみ出す部分を非表示にする */
 }
 
 .images img {
@@ -187,36 +170,17 @@ header {
   height: auto;
 }
 
-.A {
-  width: 100%;
-  max-width: 3600px;
-  /* 元画像サイズ */
-  height: auto;
-  transform: scale(1.8);
-  /* 1.5倍拡大 */
-  transform-origin: center;
-  z-index: 0;
-  /* ← 背景に配置 */
-  position: relative;
-  /* ← z-indexを効かせるには必要 */
-  margin-bottom: 30rem;
-  /* ← 追加！拡大画像と重ならないように下に余白 */
-  margin-top: 30rem;
-}
-
+.A,
 .B {
   width: 100%;
   max-width: 3600px;
-  /* 元画像サイズ */
   height: auto;
   transform: scale(1.8);
-  /* 1.5倍拡大 */
   transform-origin: center;
   z-index: 0;
-  /* ← 背景に配置 */
   position: relative;
-  /* ← z-indexを効かせるには必要 */
   margin-bottom: 30rem;
+  margin-top: 30rem;
 }
 
 footer {
@@ -249,13 +213,21 @@ footer {
   /* リスト項目の間隔を調整 */
   .team {
     font-size: 1rem;
+    padding: 1rem;
   }
 
   /* 班紹介リストを中央寄せ */
   .teams {
-    width: 100%;
-    padding: 1rem;
+    position: relative;
+    /* スマホでは相対位置で */
+    top: auto;
+    /* 位置指定解除 */
+    left: auto;
+    transform: none;
+    /* 中央寄せも解除 */
     margin-top: 2rem;
+    /* 下に余白を追加 */
+    text-align: center;
   }
 
   /* 画像の大きさ調整 */
