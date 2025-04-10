@@ -58,7 +58,7 @@ header {
   width: 100%;
   max-width: 1000px;
   margin: auto;
-  justify-content: center;
+
 }
 
 .main-image {
@@ -68,7 +68,7 @@ header {
   transform: scale(1.8);
   transform-origin: center;
   z-index: 0;
-  position: relative;
+
 }
 
 .overlay-image {
@@ -226,47 +226,30 @@ footer {
   text-align: center;
 }
 
-/* スマホ・タブレット向け */
 @media (max-width: 768px) {
-
-  /* タイトルのフォントサイズを調整 */
   .title {
     font-size: 1.2rem;
   }
 
-  /* メニューアイコンのサイズ */
   .menu-item img {
     width: 30px;
     height: 30px;
   }
 
-  /* .team-section を縦並びに */
-  .team-section {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  /* リスト項目の間隔を調整 */
   .team {
     font-size: 1rem;
     padding: 1rem;
   }
 
-  /* 班紹介リストを中央寄せ */
   .teams {
     position: relative;
-    /* スマホでは相対位置で */
     top: auto;
-    /* 位置指定解除 */
     left: auto;
     transform: none;
-    /* 中央寄せも解除 */
     margin-top: 2rem;
-    /* 下に余白を追加 */
     text-align: center;
   }
 
-  /* 画像の大きさ調整 */
   .main-image {
     width: 90%;
     max-width: 100%;
@@ -274,16 +257,13 @@ footer {
 
   .overlay-image {
     width: 80px;
-    /* 画像サイズ調整 */
   }
 
-  /* 矢印のサイズ調整 */
   .arrow {
     width: 25px;
     height: 25px;
   }
 
-  /* 描写コンテナのマージンを調整 */
   .description-box {
     padding: 0.5rem;
   }
@@ -291,65 +271,5 @@ footer {
   footer {
     padding: 1rem;
     font-size: 0.8rem;
-  }
-}
-
-@media (min-width: 768px) {
-
-  /* タブレット以上での調整 */
-  @media (max-width: 768px) {
-    .title {
-      font-size: 1.2rem;
-    }
-
-    .menu-item img {
-      width: 30px;
-      height: 30px;
-    }
-
-    .team-section {
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .team {
-      font-size: 1rem;
-      padding: 1rem;
-    }
-
-    .teams {
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: none;
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    .main-image,
-    .A,
-    .B {
-      transform: none;
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .overlay-image {
-      width: 80px;
-    }
-
-    .arrow {
-      width: 25px;
-      height: 25px;
-    }
-
-    .description-box {
-      padding: 0.5rem;
-    }
-
-    footer {
-      padding: 1rem;
-      font-size: 0.8rem;
-    }
   }
 }
