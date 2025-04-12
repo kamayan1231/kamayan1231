@@ -20,7 +20,8 @@ header {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 3vw;
+  /* 相対値でフォントサイズを指定 */
   margin-left: 1rem;
   flex-grow: 1;
 }
@@ -37,28 +38,44 @@ header {
   height: 40px;
 }
 
+
+
+
 .main-visual {
   text-align: center;
   position: relative;
+
 }
 
 .background-img {
   width: 80%;
+  /* 相対幅に変更 */
   height: auto;
   display: block;
   margin: 0 auto;
-  margin-bottom: 10rem;
+}
+
+
+
+.AA {
+  text-align: center;
+  position: relative;
 }
 
 .image-container {
+  position: absolute;
+  /* 親要素基準で配置 */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
-
+  width: 60%;
+  /* 必要に応じて調整 */
+  top: 50%;
+  /* 垂直方向の中央 */
+  left: 50%;
+  /* 水平方向の中央 */
+  transform: translate(-50%, -50%);
+  /* 中央に配置するための補正 */
 }
 
 .main-image {
@@ -68,14 +85,16 @@ header {
   transform: scale(1.8);
   transform-origin: center;
   z-index: 0;
-
+  margin-top: 80%;
 }
 
 .overlay-image {
   position: absolute;
-  width: 150px;
-  height: auto;
-  top: 50%;
+  width: 88%;
+  height: 33%;
+  /* 相対的なサイズ */
+
+  top: 87%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -83,76 +102,129 @@ header {
 
 .arrow {
   position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 30px;
+  top: 85%;
+  width: 5vw;
+  height: 5vw;
   cursor: pointer;
 }
 
 .left-arrow {
-  left: 10%;
+  left: -5%;
 }
 
 .right-arrow {
-  right: 10%;
+  right: -10%;
 }
+
+
+.images {
+
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.images img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+
+.A {
+  width: 100%;
+  max-width: 3600px;
+  height: auto;
+
+  transform-origin: center;
+  z-index: 0;
+  position: relative;
+  margin-bottom: 30%;
+  margin-top: 70%;
+}
+
+
 
 .intro {
   padding: 2rem 1rem;
   text-align: center;
-  margin-bottom: 15rem;
 }
 
-.team-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
+.B {
+  width: 100%;
+  max-width: 3600px;
+  height: auto;
 
-.teams {
-  position: absolute;
-  /* 絶対位置で画像の上に配置 */
-  top: 1033%;
-  /* 画像の中央に配置 */
-  left: 12%;
-  transform: translate(-50%, -50%);
-  /* 中央揃え */
-  padding: 1rem;
-  border-radius: 8px;
-  width: 80%;
-  text-align: center;
-  z-index: 2;
-  /* 画像より上に表示 */
+  transform-origin: center;
+  z-index: 0;
+  position: relative;
+  margin-bottom: 30%;
+  margin-top: 30%;
 }
 
 .introduce {
   position: absolute;
-  /* 絶対位置で画像の上に配置 */
-  top: 74.6%;
-  /* 画像の中央に配置 */
-  left: 30%;
+  top: 70%;
+  /* 紹介文の位置を調整 */
+  left: 50%;
   transform: translate(-50%, -50%);
-  /* 中央揃え */
   padding: 1rem;
   border-radius: 8px;
-  width: 80%;
+  width: 60%;
+  /* 幅を調整 */
   text-align: center;
-  z-index: 2;
-  /* 画像より上に表示 */
-  font-size: 3rem;
+  z-index: 3;
+  font-size: 2.5vw;
+  /* 相対的なフォントサイズ */
+  color: black;
 }
+
+
+
+.description {
+  position: absolute;
+  top: 80%;
+  /* 紹介文の位置を調整 */
+  left: 60%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 30%;
+  /* 幅を調整 */
+  text-align: left;
+  z-index: 3;
+  font-size: 1.5vw;
+  /* 相対的なフォントサイズ */
+  color: black;
+  line-height: 1.6;
+}
+
+.teams {
+  position: absolute;
+  top: 85%;
+  /* 親要素内での縦位置を調整 */
+  left: 15%;
+  /* 親要素内での横位置を調整 */
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  border-radius: 8px;
+  width: auto;
+  text-align: center;
+  z-index: 3;
+}
+
+
 
 .team {
   cursor: pointer;
-  padding: 1.5rem;
+  padding: 1rem;
   margin: 10px 0;
-  font-size: 25px;
+  font-size: 1rem;
+  text-align: center;
   transition: transform 0.3s;
 }
 
 .selected {
-  font-size: 30px;
+  font-size: 1.2rem;
   font-weight: bold;
   border: 3px solid purple;
   display: inline-block;
@@ -160,67 +232,17 @@ header {
   line-height: 1.2;
 }
 
-.description-box {
-  max-width: 500px;
-  padding: 1rem;
-}
 
-.description {
-  position: absolute;
-  /* 絶対位置で画像の上に配置 */
-  top: 83%;
-  /* 画像の中央に配置 */
-  left: 75%;
-  transform: translate(-50%, -50%);
-  /* 中央揃え */
-  padding: 1rem;
-  border-radius: 8px;
-  width: 80%;
-  text-align: left;
-  /* 左揃え */
-  z-index: 2;
-  /* 画像より上に表示 */
-  font-size: 2rem;
-}
 
-.top-arrow,
-.bottom-arrow {
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: skyblue;
-  user-select: none;
-}
 
-.images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  overflow: hidden;
-}
 
-.images img {
-  width: 90%;
-  max-width: 800px;
-  height: auto;
-}
 
-.A,
-.B {
-  width: 100%;
-  max-width: 3600px;
-  height: auto;
-  transform: scale(1.8);
-  transform-origin: center;
-  z-index: 0;
-  position: relative;
-  margin-bottom: 30rem;
-  margin-top: 30rem;
-}
+
+
+
 
 footer {
-  padding: 2rem;
+  padding: 1rem;
   border-top: 5px solid lightgreen;
   font-size: 0.9rem;
   text-align: center;
@@ -228,7 +250,7 @@ footer {
 
 @media (max-width: 768px) {
   .title {
-    font-size: 1.2rem;
+    font-size: 5vw;
   }
 
   .menu-item img {
@@ -237,39 +259,34 @@ footer {
   }
 
   .team {
-    font-size: 1rem;
-    padding: 1rem;
+    font-size: 3vw;
+    padding: 0.8rem;
   }
 
   .teams {
     position: relative;
+    width: 100%;
     top: auto;
     left: auto;
     transform: none;
-    margin-top: 2rem;
-    text-align: center;
   }
 
   .main-image {
-    width: 90%;
-    max-width: 100%;
+    width: 100%;
+    transform: none;
   }
 
   .overlay-image {
-    width: 80px;
+    width: 15vw;
   }
 
   .arrow {
-    width: 25px;
-    height: 25px;
+    width: 8vw;
+    height: 8vw;
   }
 
-  .description-box {
-    padding: 0.5rem;
-  }
-
-  footer {
-    padding: 1rem;
-    font-size: 0.8rem;
+  .description {
+    font-size: 3.5vw;
+    width: 80%;
   }
 }
