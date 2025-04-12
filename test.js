@@ -46,7 +46,7 @@ function selectTeam(index) {
       break;
     case 3: // 映像編集班
       B.style.width = "70%";
-      B.style.height = "100rem";
+      B.style.height = "auto";
 
       break;
     case 4: // モーション班
