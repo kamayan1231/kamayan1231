@@ -26,42 +26,46 @@
   <main>
     <section class="main-visual">
       <img src="main-visual.png" alt="背景画像" class="background-img">
+    </section>
+
+    <section class="AA">
       <div class="image-container">
         <div class="relative-wrapper">
           <img src="widemoniter.PNG" class="main-image" alt="背景重ね画像">
           <img id="mainImage" src="test1.png" class="overlay-image" alt="メイン画像">
-      
-          <!-- 班紹介リストをここに移動して画像と重ねる -->
-          <div class="teams" id="teamList">
-            <div class="top-arrow" onclick="moveSelection(-1)">▲</div>
-            <div class="team" onclick="selectTeam(0)">広報班</div>
-            <div class="team" onclick="selectTeam(1)">デザイン班</div>
-            <div class="team" onclick="selectTeam(2)">音楽班</div>
-            <div class="team" onclick="selectTeam(3)">映像編集班</div>
-            <div class="team" onclick="selectTeam(4)">モーション班</div>
-            <div class="team" onclick="selectTeam(5)">3DCG班</div>
-            <div class="team" onclick="selectTeam(6)">システム実装班</div>
-            <div class="bottom-arrow" onclick="moveSelection(1)">▼</div>
-          </div>
-      
-          <!-- 矢印も重ねる -->
           <img src="left-arrow.png" class="arrow left-arrow" onclick="changeImage(-1)" alt="左矢印">
           <img src="right-arrow.png" class="arrow right-arrow" onclick="changeImage(1)" alt="右矢印">
         </div>
       </div>
-      
-      <!-- 班紹介文のセクションは残す -->
-      <section class="intro">
-        <h2 class="introduce">班紹介</h2>
-        <div class="description-box">
-          <p class="description" id="description">班の紹介文がここに表示されます</p>
-        </div>
-      </section>
-      
+    </section>
+
+
+
 
     <section class="images">
       <img class="A" src="syoukai.PNG" alt="紹介画像1">
+
+    </section>
+    j
+    <!-- 班紹介文のセクションは残す -->
+
+    <section class="intro">
       <img class="B" src="syoukai.PNG" alt="紹介画像2">
+      <h2 class="introduce">班紹介</h2>
+      <div class="description-box">
+        <p class="description" id="description">班の紹介文がここに表示されます</p>
+      </div>
+      <div class="teams" id="teamList">
+        <div class="top-arrow" onclick="moveSelection(-1)">▲</div>
+        <div class="team" onclick="selectTeam(0)">広報班</div>
+        <div class="team" onclick="selectTeam(1)">デザイン班</div>
+        <div class="team" onclick="selectTeam(2)">音楽班</div>
+        <div class="team" onclick="selectTeam(3)">映像編集班</div>
+        <div class="team" onclick="selectTeam(4)">モーション班</div>
+        <div class="team" onclick="selectTeam(5)">3DCG班</div>
+        <div class="team" onclick="selectTeam(6)">システム実装班</div>
+        <div class="bottom-arrow" onclick="moveSelection(1)">▼</div>
+      </div>
     </section>
   </main>
 
