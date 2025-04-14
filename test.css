@@ -128,11 +128,21 @@ header {
 }
 
 .left-arrow {
+  z-index: 2;
   left: 0%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: skyblue;
+  user-select: none;
 }
 
 .right-arrow {
   right: 0%;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: skyblue;
+  user-select: none;
 }
 
 
@@ -231,9 +241,9 @@ header {
 
 .description {
   position: absolute;
-  top: 37%;
+  top: 35%;
   /* 紹介文の位置を調整 */
-  left: 55%;
+  left: 53.5%;
   transform: translate(-50%, -50%);
   padding: 1rem;
   border-radius: 8px;
@@ -241,10 +251,10 @@ header {
   /* 幅を調整 */
   text-align: left;
   z-index: 3;
-  font-size: 1.3vw;
+  font-size: 1.5rem;
   /* 相対的なフォントサイズ */
   color: black;
-
+  white-space: nowrap;
 }
 
 .teams {
@@ -304,62 +314,4 @@ footer {
   border-top: 5px solid lightgreen;
   font-size: 0.9rem;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .title {
-    font-size: 5vw;
-  }
-
-  .menu-item img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .team {
-    font-size: 3vw;
-    padding: 0.8rem;
-  }
-
-  .teams {
-    position: relative;
-    width: 100%;
-    top: auto;
-    left: auto;
-    transform: none;
-  }
-
-  .main-image {
-    width: 100%;
-    transform: none;
-  }
-
-  .overlay-image {
-    width: 15vw;
-  }
-
-  .arrow {
-    width: 8vw;
-    height: 8vw;
-  }
-
-  .description {
-    font-size: 3.5vw;
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .arrow {
-    width: 10vw;
-    height: 10vw;
-    top: 90%;
-    /* 位置を調整 */
-  }
-
-  .description {
-    font-size: 4vw;
-    width: 90%;
-    /* 幅を画面内に調整 */
-  }
 }
