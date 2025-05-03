@@ -7,11 +7,20 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, rgba(152, 233, 209, 1) 33%, rgba(229, 162, 255, 1));
-  background-attachment: fixed;
-  height: 100%;
 
-  /* 横方向の空白を防ぐ */
+  background:
+    url('background-img.jpg') no-repeat center top,
+    linear-gradient(to bottom, rgba(152, 233, 209, 1) 33%, rgba(229, 162, 255, 1));
+
+  background-size: 80%, cover;
+  /* 画像は60%、グラデーションは全体 */
+  background-attachment: scroll, scroll;
+  /* スクロールに追従（←ここが重要） */
+  background-repeat: repeat-y;
+  /* ← 画像を縦横に繰り返す */
+  min-height: calc(100vh - 1vw);
+  padding-bottom: 1vw;
+  /* footer分の余白を追加 */
 }
 
 header {
@@ -243,7 +252,7 @@ header {
 
 
 .intro {
-  padding: 1rem;
+  padding: 1vw;
   text-align: center;
   position: relative;
   height: 100%;
@@ -264,9 +273,9 @@ header {
 
 .introduce {
   position: absolute;
-  top: 18%;
+  top: 17%;
   /* 紹介文の位置を調整 */
-  left: 35%;
+  left: 33%;
   transform: translate(-50%, -50%);
   padding: 1rem;
   border-radius: 8px;
@@ -285,7 +294,7 @@ header {
   position: absolute;
   top: 35%;
   /* 紹介文の位置を調整 */
-  left: 53.5%;
+  left: 54%;
   transform: translate(-50%, -50%);
   padding: 1rem;
   border-radius: 8px;
@@ -307,7 +316,7 @@ header {
   /* 親要素内での横位置を調整 */
   transform: translate(-50%, -50%);
   padding: 1vw;
-  border-radius: 8px;
+  border-radius: 1vw;
   width: auto;
   text-align: center;
   z-index: 3;
@@ -338,68 +347,42 @@ header {
   font-weight: bold;
   border: 3px solid purple;
   display: inline-block;
-  padding: 0.2rem 1px;
+  padding: 0.1vw;
   line-height: 1.2;
 }
 
 
 
-
-
-
-
-
-.slider-container {
+.team-images {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 80%;
-  margin: 100px auto;
-  /* 画面中央あたりに */
-  overflow: hidden;
+  gap: 2%;
+  height: 1vw;
 }
 
-.slider {
-  position: relative;
-  width: 100%;
+#team-image1,
+#team-image2 {
+  position: absolute;
   height: auto;
 }
 
-.slide {
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
-  top: 0;
-  left: 0;
+#team-image1 {
+  width: 15%;
+  top: -4500%;
+  left: 48%;
+  transform: translateX(-50%);
 }
 
-.slide.active {
-  opacity: 1;
+#team-image2 {
+  width: 15%;
+  top: -4500%;
+  right: 28%;
 }
 
-.arrow-a {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: none;
-  color: skyblue;
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
 
-.arrow-a.left-a {
-  left: 10px;
-}
 
-.arrow-a.right-a {
-  right: 10px;
-}
+
 
 
 
@@ -407,8 +390,11 @@ header {
 
 
 footer {
-  padding: 1rem;
+  background: transparent;
+  /* footerの背景画像を透明に設定 */
+  padding: 1vw;
   border-top: 5px solid lightgreen;
-  font-size: 0.9rem;
+  font-size: 1vw;
+  font-weight: bold;
   text-align: center;
 }
