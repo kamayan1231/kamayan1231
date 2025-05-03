@@ -28,7 +28,7 @@ const descriptions = [
   "システム実装班の紹介文...",
 ];
 const teamImages = [
-  ["test.png", "images/kouhou2.jpg"], // 広報班
+  ["test1.png", "test2.png"], // 広報班
   ["test.png", "images/design2.jpg"], // デザイン班
   ["images/music1.jpg", "images/music2.jpg"],   // 音楽班
   ["images/movie1.jpg", "images/movie2.jpg"],   // 映像編集班
