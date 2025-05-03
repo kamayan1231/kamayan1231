@@ -78,6 +78,7 @@ header {
   z-index: 0;
 }
 
+
 .LOGO {
   width: 50%;
   height: auto;
@@ -90,36 +91,63 @@ header {
 }
 
 
-.AA {
-  text-align: center;
+
+
+.custom-slider-wrapper {
   position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  height: 0.5vw;
 }
 
-.image-container {
+.custom-base-image {
   position: absolute;
-  /* 親要素基準で配置 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  /* 必要に応じて調整 */
-  top: 50%;
-  /* 垂直方向の中央 */
+  /* 追加 */
+  top: 3000%;
+  /* 上からの距離 */
   left: 50%;
-  /* 水平方向の中央 */
-  transform: translate(-50%, -50%);
-  /* 中央に配置するための補正 */
+  /* 中央揃えの基点 */
+  transform: translateX(-50%);
+  /* 中央揃え */
+  width: 120%;
+  display: block;
+  z-index: 0;
 }
 
-.main-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  transform: scale(1.8);
-  transform-origin: center;
-  z-index: 0;
-  margin-top: 80%;
+.custom-overlay-image {
+  position: absolute;
+  top: 3000%;
+  left: 25%;
+  width: 50%;
+  pointer-events: none;
+  z-index: 2;
 }
+
+.custom-arrow {
+  position: absolute;
+  top: 5500%;
+  transform: translateY(-50%);
+  font-size: 2vw;
+  color: skyblue;
+  cursor: pointer;
+  z-index: 3;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.custom-arrow-left {
+  left: 20%;
+}
+
+.custom-arrow-right {
+  right: 20%;
+}
+
+
+
 
 .overlay-image {
   position: absolute;
@@ -142,8 +170,8 @@ header {
 }
 
 .left-arrow {
-  z-index: 2;
-  left: 0%;
+  z-index: 3;
+  left: -40%;
   cursor: pointer;
   font-size: 1.5rem;
   color: skyblue;
@@ -152,7 +180,7 @@ header {
 
 .right-arrow {
   right: 0%;
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
   font-size: 1.5rem;
   color: skyblue;
@@ -317,6 +345,61 @@ header {
 
 
 
+
+
+
+
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 100px auto;
+  /* 画面中央あたりに */
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.arrow-a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: skyblue;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-a.left-a {
+  left: 10px;
+}
+
+.arrow-a.right-a {
+  right: 10px;
+}
 
 
 
