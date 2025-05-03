@@ -1,9 +1,19 @@
-const images = ["test1.png", "test2.png", "test3.png", "test4.png"];
-let currentIndex = 0;
+const customOverlayImages = ["test1.png", "test2.png", "test3.png"];
+let customCurrentIndex = 0;
+const customOverlay = document.getElementById("customOverlay");
 
-function changeImage(direction) {
-  currentIndex = (currentIndex + direction + images.length) % images.length;
-  document.getElementById("mainImage").src = images[currentIndex];
+function customShowImage(index) {
+  customOverlay.src = customOverlayImages[index];
+}
+
+function customNextImage() {
+  customCurrentIndex = (customCurrentIndex + 1) % customOverlayImages.length;
+  customShowImage(customCurrentIndex);
+}
+
+function customPrevImage() {
+  customCurrentIndex = (customCurrentIndex - 1 + customOverlayImages.length) % customOverlayImages.length;
+  customShowImage(customCurrentIndex);
 }
 
 const descriptions = [
@@ -17,15 +27,30 @@ const descriptions = [
   "3DCG班の紹介文...",
   "システム実装班の紹介文...",
 ];
-
+const teamImages = [
+  ["test.png", "images/kouhou2.jpg"], // 広報班
+  ["test.png", "images/design2.jpg"], // デザイン班
+  ["images/music1.jpg", "images/music2.jpg"],   // 音楽班
+  ["images/movie1.jpg", "images/movie2.jpg"],   // 映像編集班
+  ["images/motion1.jpg", "images/motion2.jpg"], // モーション班
+  ["images/3dcg1.jpg", "images/3dcg2.jpg"],      // 3DCG班
+  ["images/system1.jpg", "images/system2.jpg"]   // システム実装班
+];
 
 function selectTeam(index) {
   let teams = document.querySelectorAll('.team');
   teams.forEach(team => team.classList.remove('selected'));
   teams[index].classList.add('selected');
+
   document.getElementById('description').innerText = descriptions[index];
+
+  // 画像を変更
+  document.getElementById('team-image1').src = teamImages[index][0];
+  document.getElementById('team-image2').src = teamImages[index][1];
+
   currentIndex = index;
 }
+
 
 function moveSelection(direction) {
   let teams = document.querySelectorAll('.team');
@@ -36,4 +61,32 @@ function moveSelection(direction) {
 // 初期状態の設定
 document.addEventListener("DOMContentLoaded", function () {
   selectTeam(0); // 最初に「広報班」を選択
+});
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+    }
+  });
+}
+
+prevBtn.addEventListener('click', () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+});
+
+nextBtn.addEventListener('click', () => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+});
+
+// ページ読み込み時に最初のスライドを表示
+document.addEventListener('DOMContentLoaded', function () {
+  showSlide(currentSlide);
 });
