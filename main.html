@@ -3,67 +3,95 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Header Sample</title>
-  <link rel="stylesheet" href="main.css">
-  <script defer src="script.js"></script>
+  <title>OITバーチャルライブ研究会</title>
+  <link rel="stylesheet" href="test.css">
+  <script defer src="test.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
   <header>
-    <img src="icon.PNG" alt="⑨" width="50" height="50">
-    <h1 class="title">OITバーチャルライブ研究会　Home News Info</h1>
+    <img src="icon.PNG" class="mainLOGO" alt="⑨">
+    <h1 class="title">OITバーチャルライブ研究会 Home News Info</h1>
+    <div class="nav-buttons">
+      <a href="#section1" class="nav-button">イベント情報</a>
+      <a href="#section2" class="nav-button">紹介</a>
+      <a href="#section3" class="nav-button">班情報</a>
+    </div>
     <nav class="nav">
       <ul class="menu-group">
-        <li class="menu-item"><a href="https://x.com/oit_vlken"><img src="logo-black.png" alt="次へ" width="50"
-              height="50"></a></li>
+        <li class="menu-item"><a href="https://x.com/oit_vlken"><img src="logo-black.png" class="x" alt="X"></a></li>
         <li class="menu-item"><a href="https://www.instagram.com/oit_vlken/"><img src="インスタグラムのシンプルなロゴのアイコン 1.jpeg"
-              alt="次へ" width="50" height="50"></a></li>
-
+              class="instagram" alt="Instagram"></a></li>
       </ul>
     </nav>
   </header>
-  <div class="Main-Image">
-    <img src="sumple.jpg" alt="1920*1080" style="display: block; margin: auto;" />
 
-  </div>
-  <div class="image-container">
-    <img id="mainImage" src="test1.png" class="overlay-image" alt="メイン画像">
-    <img src="widemoniter.PNG" class="main-image" alt="重ねた画像">
-    <img src="left-arrow.png" class="arrow left-arrow" onclick="changeImage(-1)" alt="左矢印">
-    <img src="right-arrow.png" class="arrow right-arrow" onclick="changeImage(1)" alt="右矢印">
-  </div>
-  <div class="teams" id="teamList">
-    <div class="top-arrow" onclick="moveSelection(-1)">▲</div>
-    <div class="team" onclick="selectTeam(0)">広報班</div>
-    <div class="team" onclick="selectTeam(1)">デザイン班</div>
-    <div class="team" onclick="selectTeam(2)">音楽班</div>
-    <div class="team" onclick="selectTeam(3)">映像編集班</div>
-    <div class="team" onclick="selectTeam(4)">モーション班</div>
-    <div class="team" onclick="selectTeam(5)">3DCG班</div>
-    <div class="team" onclick="selectTeam(6)">システム実装班</div>
-    <div class="bottom-arrow" onclick="moveSelection(1)">▼</div>
-  </div>
+  <main>
+    <section class="main-visual">
+      <img src="main-visual.png" alt="背景画像" class="background-img">
+      <img src="LOGO.png" alt="ロゴ" class="LOGO">
+    </section>
 
-  <div class="container">
-    <h2 class="introduce">班紹介</h2>
-    <div class="description" id="description">班の紹介文がここに表示されます</div>
-  </div>
+    <!-- 画像切り替えエリア -->
+    <div class="custom-slider-wrapper" id="section1">
+      <img src="widemoniter.PNG" class="custom-base-image" alt="ベース画像" />
+      <img id="customOverlay" class="custom-overlay-image" src="test1.png" alt="重ね画像" />
 
-  <img src="syoukai.PNG" alt="1920*1080" width="1440" height="810" style="display: block; margin: auto;" />
-  <img src="syoukai.PNG" alt="1920*1080" width="1440" height="810" style="display: block; margin: auto;" />
+      <!-- 左右の矢印 -->
+      <div class="custom-arrow custom-arrow-left" onclick="customPrevImage()">&#8592;</div>
+      <div class="custom-arrow custom-arrow-right" onclick="customNextImage()">&#8594;</div>
+    </div>
+
+
+
+
+    <section class="images">
+      <img class="A" src="syoukai.PNG" alt="紹介画像1">
+      <h2 class="question" id="section2">VL研とは？</h2>
+      <p class="answer">
+        「メディア表現の可能性を研究する」を<br>テーマに日々(何かの)研究を行う部活動<br>４月に学内で開催される「桜春祭」と<br>１１月の「北山祭」での制作発表を目標に<br>日々集団制作を行っている。また１１月の<br>北山祭では研究発表としてＡＲ、ＶＲでの<br>バーチャルライブを開催している。
+      </p>
+    </section>
+
+    <!-- 班紹介文のセクションは残す -->
+
+    <section class="intro" id="section3">
+      <img id="B" class="B" src="syoukai.PNG" alt="紹介画像2">
+      <h2 class="introduce">班紹介</h2>
+
+      <p class="description" id="description">班の紹介文がここに表示されます</p>
+      <div class="team-images">
+        <img id="team-image1" src="" alt="班画像1">
+        <img id="team-image2" src="" alt="班画像2">
+
+
+      </div>
+      <div class="teams" id="teamList">
+        <div class="top-arrow" onclick="moveSelection(-1)">▲</div>
+        <div class="team" onclick="selectTeam(0)">運営班</div>
+        <div class="team" onclick="selectTeam(1)">広報班</div>
+        <div class="team" onclick="selectTeam(2)">デザイン班</div>
+        <div class="team" onclick="selectTeam(3)">音楽班</div>
+        <div class="team" onclick="selectTeam(4)">映像編集班</div>
+        <div class="team" onclick="selectTeam(5)">モーション班</div>
+        <div class="team" onclick="selectTeam(6)">3DCG班</div>
+        <div class="team" onclick="selectTeam(7)">システム実装班</div>
+        <div class="bottom-arrow" onclick="moveSelection(1)">▼</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>当サークルが制作したコンテンツには<a
+        href="http://piapro.jp/license/pcl/summary">ピアプロ・キャラクター・ライセンス</a>に基づいて、クリプトン・フューチャー・メディア株式会社のキャラクター「MEIKO／KAITO／初音ミク／鏡音リン・レン／巡音ルカ」を描いたものが含まれています。
+    </p>
+    <p>「MEIKO／KAITO／初音ミク／鏡音リン・レン／巡音ルカ」はクリプトン・フューチャー・メディア株式会社の著作物です。<br>© Crypton Future Media, INC. www.piapro.net</p>
+    <p>当サークルのイベントはピアプロ・キャラクター・ライセンスおよび著作権法第38条第1項（営利を目的としない上演等）、第20条（同一性保持権）に基づいて実施します。</p>
+    <p>当サークルは学生による大学公認の課外活動団体であり、所属大学やクリプトン・フューチャー・メディア等が開催する公式のイベント・団体とは一切関係ありません。</p>
+    <p>© 2025 OITバーチャルライブ研究会</p>
+  </footer>
 </body>
-<footer class="uk-text-center uk-background-muted uk-dark uk-padding-large">
-  <p style="text-align:center">当サークルが制作したコンテンツには<a
-      href="http://piapro.jp/license/pcl/summary">ピアプロ・キャラクター・ライセンス</a>に基づいて<br>クリプトン・フューチャー・メディア株式会社のキャラクター「MEIKO／KAITO／初音ミク／鏡音リン・レン／巡音ルカ」を描いたものが含まれています。
-  </p>
-  <p style="text-align:center">「MEIKO／KAITO／初音ミク／鏡音リン・レン／巡音ルカ」はクリプトン・フューチャー・メディア株式会社の著作物です。<br>
-    © Crypton Future Media, INC. www.piapro.net</p>
-  <p style="text-align:center">当サークルのイベントはピアプロ・キャラクター・ライセンスおよび著作権法第38条第1項（営利を目的としない上演等）、第20条（同一性保持権）に基づいて実施します。</p>
-  <p style="text-align:center">当サークルは学生による大学公認の課外活動団体であり、所属大学やクリプトン・フューチャー・メディア等が開催する公式のイベント・団体とは一切関係ありません。</p>
-
-  <p style="text-align:center">© 2025 OITバーチャルライブ研究会</p>
-</footer>
 
 </html>
