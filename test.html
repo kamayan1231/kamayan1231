@@ -13,6 +13,11 @@
   <header>
     <img src="icon.PNG" class="mainLOGO" alt="⑨">
     <h1 class="title">OITバーチャルライブ研究会 Home News Info</h1>
+    <div class="nav-buttons">
+      <a href="#section1" class="nav-button">イベント情報</a>
+      <a href="#section2" class="nav-button">紹介</a>
+      <a href="#section3" class="nav-button">班情報</a>
+    </div>
     <nav class="nav">
       <ul class="menu-group">
         <li class="menu-item"><a href="https://x.com/oit_vlken"><img src="logo-black.png" class="x" alt="X"></a></li>
@@ -29,7 +34,7 @@
     </section>
 
     <!-- 画像切り替えエリア -->
-    <div class="custom-slider-wrapper">
+    <div class="custom-slider-wrapper" id="section1">
       <img src="widemoniter.PNG" class="custom-base-image" alt="ベース画像" />
       <img id="customOverlay" class="custom-overlay-image" src="test1.png" alt="重ね画像" />
 
@@ -43,7 +48,7 @@
 
     <section class="images">
       <img class="A" src="syoukai.PNG" alt="紹介画像1">
-      <h2 class="question">VL研とは？</h2>
+      <h2 class="question" id="section2">VL研とは？</h2>
       <p class="answer">
         「メディア表現の可能性を研究する」を<br>テーマに日々(何かの)研究を行う部活動<br>４月に学内で開催される「桜春祭」と<br>１１月の「北山祭」での制作発表を目標に<br>日々集団制作を行っている。また１１月の<br>北山祭では研究発表としてＡＲ、ＶＲでの<br>バーチャルライブを開催している。
       </p>
@@ -51,7 +56,7 @@
 
     <!-- 班紹介文のセクションは残す -->
 
-    <section class="intro">
+    <section class="intro" id="section3">
       <img id="B" class="B" src="syoukai.PNG" alt="紹介画像2">
       <h2 class="introduce">班紹介</h2>
 
@@ -64,13 +69,14 @@
       </div>
       <div class="teams" id="teamList">
         <div class="top-arrow" onclick="moveSelection(-1)">▲</div>
-        <div class="team" onclick="selectTeam(0)">広報班</div>
-        <div class="team" onclick="selectTeam(1)">デザイン班</div>
-        <div class="team" onclick="selectTeam(2)">音楽班</div>
-        <div class="team" onclick="selectTeam(3)">映像編集班</div>
-        <div class="team" onclick="selectTeam(4)">モーション班</div>
-        <div class="team" onclick="selectTeam(5)">3DCG班</div>
-        <div class="team" onclick="selectTeam(6)">システム実装班</div>
+        <div class="team" onclick="selectTeam(0)">運営班</div>
+        <div class="team" onclick="selectTeam(1)">広報班</div>
+        <div class="team" onclick="selectTeam(2)">デザイン班</div>
+        <div class="team" onclick="selectTeam(3)">音楽班</div>
+        <div class="team" onclick="selectTeam(4)">映像編集班</div>
+        <div class="team" onclick="selectTeam(5)">モーション班</div>
+        <div class="team" onclick="selectTeam(6)">3DCG班</div>
+        <div class="team" onclick="selectTeam(7)">システム実装班</div>
         <div class="bottom-arrow" onclick="moveSelection(1)">▼</div>
       </div>
     </section>
