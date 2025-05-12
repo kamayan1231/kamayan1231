@@ -158,6 +158,14 @@ left: 20%;
 }
 
 
+.googlemap{
+  position: absolute;
+  width: 40vw;
+  height: 30vw;
+  left: 30%;
+  top: 250%;
+  
+}
 
 
 
