@@ -140,32 +140,99 @@ header {
   /* 2D(平面)で回転 */
 }
 
-
-
-
-
-
-.A {
-  width: 60%;
-  max-width: 100vw;
-  height: auto;
-
-  transform-origin: center;
-  z-index: 0;
+.contact {
+  display: flex;
+  flex-direction: column;
+  /* 縦並びにする場合 */
+  align-items: center;
+  /* 横中央寄せ */
+  justify-content: center;
+  /* 縦方向の中央寄せ（flex-directionによっては不要） */
+  text-align: center;
   position: relative;
-left: 20%;
-  margin-top: 5%;
 }
 
+.contact .A {
+  width: 60%;
+  height: auto;
+  border-radius: 2vw;
+  margin-bottom: 2vw;
+  margin-top: 8vw;
+}
 
-.googlemap{
+.contact .question {
+  font-size: 2vw;
   position: absolute;
-  width: 40vw;
-  height: 30vw;
-  left: 30%;
-  top: 250%;
-  
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 21%;
+  left: 33%;
 }
+
+.contact .answer {
+  position: absolute;
+  font-size: 1.2vw;
+  z-index: 1;
+}
+
+
+.QA {
+  display: flex;
+  flex-direction: column;
+  /* 縦並びにする場合 */
+  align-items: center;
+  /* 横中央寄せ */
+  justify-content: center;
+  /* 縦方向の中央寄せ（flex-directionによっては不要） */
+  text-align: center;
+}
+
+.QA .A {
+  width: 60%;
+  height: auto;
+  border-radius: 2vw;
+  margin-bottom: 8vw;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  /* 縦並びにする場合 */
+  align-items: center;
+  /* 横中央寄せ */
+  justify-content: center;
+  /* 縦方向の中央寄せ（flex-directionによっては不要） */
+  text-align: center;
+  position: relative;
+}
+
+.map .A {
+  width: 60%;
+  height: auto;
+  border-radius: 2vw;
+}
+
+.map .root {
+  font-size: 2vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 6.5%;
+  left: 33%;
+}
+
+.map .mainmap {
+  position: absolute;
+  width: 40%;
+  height: 76%;
+  top: 16%;
+  border-radius: 16px;
+  /* ← ここが角丸指定 */
+}
+
+
 
 
 
