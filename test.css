@@ -337,9 +337,9 @@ header {
 
 .description {
   position: absolute;
-  top: 35%;
+  top: 36%;
   /* 紹介文の位置を調整 */
-  left: 54%;
+  left: 52.7%;
   transform: translate(-50%, -50%);
   padding: 1rem;
   border-radius: 8px;
@@ -414,15 +414,16 @@ header {
 
 #team-image1 {
   width: 15%;
-  top: -4500%;
+  top: -4110%;
   left: 48%;
   transform: translateX(-50%);
 }
 
 #team-image2 {
   width: 15%;
-  top: -4500%;
-  right: 28%;
+  top: -4110%;
+  right: 21%;
+  transform: translateX(-50%);
 }
 
 
