@@ -175,8 +175,12 @@ header {
   font-size: 1.2vw;
   z-index: 1;
   text-align: left;
-  left: 32%;
+  left: 31%;
   top: 30%;
+  height: 58%;
+  overflow: scroll;
+  overflow: auto;
+  width: 39%;
 }
 
 
@@ -209,14 +213,16 @@ header {
   left: 33%;
 }
 
-.Questions {
+.twitter-tweet {
   font-size: 1.3vw;
   position: absolute;
   /* または absolute にするなら親に position: relative を付ける */
   z-index: 1;
-  margin-bottom: 1vw;
-  top: 17%;
-  left: 33%;
+  overflow: scroll;
+  overflow: auto;
+  top: 15%;
+  left: 37%;
+  height: 60%;
 }
 
 
