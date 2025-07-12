@@ -355,7 +355,7 @@ header {
 
 .teams {
   position: absolute;
-  top: 40%;
+  top: 41%;
   /* 親要素内での縦位置を調整 */
   left: 33%;
   /* 親要素内での横位置を調整 */
@@ -365,14 +365,14 @@ header {
   width: auto;
   text-align: center;
   z-index: 3;
-
+  
 
 }
 
 .top-arrow,
 .bottom-arrow {
   cursor: pointer;
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: skyblue;
   user-select: none;
 }
@@ -380,7 +380,7 @@ header {
 .team {
   cursor: pointer;
   padding: 1vw;
-  margin: 0.3vw;
+  margin: 0.1vw;
 
   text-align: center;
   transition: transform 1.5vw;
@@ -414,14 +414,14 @@ header {
 
 #team-image1 {
   width: 15%;
-  top: -4110%;
+  top: -4300%;
   left: 48%;
   transform: translateX(-50%);
 }
 
 #team-image2 {
   width: 15%;
-  top: -4110%;
+  top: -4300%;
   right: 21%;
   transform: translateX(-50%);
 }
