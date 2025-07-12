@@ -179,6 +179,21 @@ header {
   top: 30%;
 }
 
+.contact-button {
+  position: absolute;
+  font-size: 2.5vw;
+  top: 65%;
+  display: inline-block;
+  padding: 3vw 6VW;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+
+  border-radius: 1VW;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
 
 .QA {
   display: flex;
@@ -209,6 +224,7 @@ header {
   left: 33%;
 }
 
+
 .Questions {
   font-size: 1.3vw;
   position: absolute;
@@ -220,7 +236,134 @@ header {
 }
 
 
+.Q1 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 17%;
+  left: 30%;
 
+}
+
+.A1 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 21%;
+  right: 30%;
+
+}
+
+.Q2 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 25%;
+  left: 30%;
+
+}
+
+.A2 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 29%;
+  right: 30%;
+
+}
+
+.Q3 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 33%;
+  left: 30%;
+
+}
+
+.A3 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 37%;
+  right: 30%;
+
+}
+
+.Q4 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 41%;
+  left: 30%;
+
+}
+
+.A4 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 45%;
+  right: 30%;
+}
+
+.Q5 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 53%;
+  left: 30%;
+
+}
+
+.A5 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 57%;
+  right: 30%;
+}
+
+.Q6 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 65%;
+  left: 30%;
+
+}
+
+.A6 {
+  font-size: 1.3vw;
+  position: absolute;
+  /* または absolute にするなら親に position: relative を付ける */
+  z-index: 1;
+  margin-bottom: 1vw;
+  top: 69%;
+  right: 30%;
+}
 
 
 
