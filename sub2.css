@@ -115,8 +115,16 @@ header {
   justify-content: center;
 }
 
+.menu-item_y{
+display: flex;
+  align-items: center;
+  justify-content: center;
 
-
+}
+.menu-item_y img {
+  width: 6vw;
+  height: auto;
+}
 
 
 .background-img {
@@ -213,62 +221,15 @@ header {
   left: 33%;
 }
 
-.twitter-tweet {
-  font-size: 1.3vw;
+.twitter{
   position: absolute;
-  /* または absolute にするなら親に position: relative を付ける */
   z-index: 1;
-  overflow: scroll;
-  overflow: auto;
-  top: 15%;
-  left: 37%;
-  height: 60%;
-}
-
-
-
-
-
-
-
-
-
-.map {
-  display: flex;
-  flex-direction: column;
-  /* 縦並びにする場合 */
-  align-items: center;
-  /* 横中央寄せ */
-  justify-content: center;
-  /* 縦方向の中央寄せ（flex-directionによっては不要） */
-  text-align: center;
-  position: relative;
-}
-
-.map .A {
-  width: 60%;
+  top: 20%;
+  left: 18.5%;
+  width: 63%;
   height: auto;
-  border-radius: 2vw;
 }
 
-.map .root {
-  font-size: 2vw;
-  position: absolute;
-  /* または absolute にするなら親に position: relative を付ける */
-  z-index: 1;
-  margin-bottom: 1vw;
-  top: 6.5%;
-  left: 33%;
-}
-
-.map .mainmap {
-  position: absolute;
-  width: 40%;
-  height: 76%;
-  top: 16%;
-  border-radius: 16px;
-  /* ← ここが角丸指定 */
-}
 
 
 
