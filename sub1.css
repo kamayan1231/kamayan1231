@@ -115,7 +115,16 @@ header {
   justify-content: center;
 }
 
+.menu-item_y{
+display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+.menu-item_y img {
+  width: 6vw;
+  height: auto;
+}
 
 
 
