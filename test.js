@@ -1,4 +1,4 @@
-const customOverlayImages = ["test1.png", "test2.png", "test3.png"];
+const customOverlayImages = ["", "", ""];
 let customCurrentIndex = 0;
 const customOverlay = document.getElementById("customOverlay");
 
