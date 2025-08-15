@@ -212,7 +212,7 @@ display: flex;
   position: absolute;
   top: 4500%;
   left: 33%;
-  font-size: 10rem;
+  font-size: 10vw;
 }
 
 
@@ -456,4 +456,5 @@ footer {
   font-size: 1vw;
   font-weight: bold;
   text-align: center;
+
 }
