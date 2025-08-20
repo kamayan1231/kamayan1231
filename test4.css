@@ -41,7 +41,7 @@ a:hover {
   justify-content: flex-start;
   gap: 1vw;
   margin-top: 0.1vw;
-  z-index: 2;
+  z-index: 5;
 }
 
 .nav-button {
@@ -53,7 +53,7 @@ a:hover {
 
   border-radius: 1VW;
   transition: background-color 0.3s, color 0.3s;
-z-index: 2;
+z-index: 5;
 }
 
 .nav-button:hover {
@@ -459,4 +459,5 @@ footer {
   text-align: center;
 
 }
+
 
