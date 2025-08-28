@@ -1,7 +1,9 @@
-* {
-
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; /* 横スクロールを防ぐ */
 }
 
 
@@ -10,17 +12,19 @@ body {
   font-family: sans-serif;
 
   background:
-    url('background-img.jpg') no-repeat center top,
-    linear-gradient(to bottom, rgba(152, 233, 209, 1) 33%, rgba(229, 162, 255, 1));
+    linear-gradient(to bottom, rgba(152, 233, 209, 1) 33%, rgba(229, 162, 255, 1)),
 
-  background-size: 80%, cover;
+    url('background-img.jpg') no-repeat center top;
+    
+  background-size: cover,80% auto;
   /* 画像は60%、グラデーションは全体 */
   background-attachment: scroll, scroll;
   /* スクロールに追従（←ここが重要） */
- 
+ background-position: center top, center top;
+  background-repeat: no-repeat, repeat-y;
   /* ← 画像を縦横に繰り返す */
-  background-repeat: repeat-y;
-  min-height: calc(100vh - 1vw);
+ 
+  
   padding-bottom: 1vw;
   /* footer分の余白を追加 */
 }
@@ -74,8 +78,8 @@ a:hover {
 header {
   display: flex;
   align-items: center;
-  padding: 1vw;
-  border-bottom: 0.1VW solid purple;
+  padding: 1rem;
+  border-bottom: 0.1rem solid purple;
   background-color: white;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -190,14 +194,15 @@ text-align: center;
 }
 
 .daily .A {
-  width: 70rem;
+  width: 60%;
   height: auto;
+  margin-top: 10rem;
   border-radius: 2rem;
   margin-bottom: 8rem;
 }
 
 .Q {
-  font-size: 2rem;
+  font-size: 2.5rem;
   position: absolute;
   /* または absolute にするなら親に position: relative を付ける */
   z-index: 1;
@@ -245,4 +250,123 @@ footer {
   margin-bottom: 0;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+}
+
+
+
+
+/* スマホ用レイアウト調整 */
+@media (max-width: 768px) {
+
+  /* ヘッダー関連 */
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mainLOGO {
+    width: 20vw; /* スマホでは少し大きめに */
+    margin: 0 auto 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem; /* 画面幅に収まる大きさに */
+    margin: 0.5rem 0;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-button {
+    font-size: 1rem;
+    width: 80%;
+    padding: 0.8rem;
+  }
+
+  .nav .menu-group {
+    display: flex;           /* ← これが必須 */
+  justify-content: center; /* 横方向の中央寄せ */
+  align-items: center;     /* 縦方向の中央寄せ */
+  gap: 0.5rem;
+  margin: 0.5rem auto;
+  padding: 0;              /* 不要な余白がある場合はリセット */
+  list-style: none;        /* li のポチを消す */
+  left: 50%;
+  }
+
+
+  .menu-item img,
+  .menu-item_y img {
+    width: 14vw; /* 小さなアイコンに */
+     justify-content: center;
+     display: block;
+  margin: 0 auto; /* 画像を中央寄せ */
+  }
+
+
+  /* コンテンツ部分 */
+  .log {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .log .A {
+    width: 95%; /* 画面幅に合わせる */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .log .log1{
+    position: absolute; /* 絶対配置解除 */
+    
+   top: 10%;
+   left: 25%;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+ .log .log2 {
+    position: absolute; /* 絶対配置解除 */
+    width: 90%;
+    margin: 0.5rem auto;
+    font-size: 0.5rem;
+    text-align: left;
+    left: 18%;
+    top: 25%;
+  }
+  .daily .A {
+    width: 95%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .daily .Q {
+    position: absolute;
+    margin: 0.5rem auto;
+    font-size: 1.2rem;
+    left: 25%;
+    top: 12%;
+  }
+
+  .twitter {
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 10%;
+    top: 25%;
+  }
+
+
+  /* フッター */
+  footer {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
 }
