@@ -53,7 +53,7 @@ a:hover {
 
 .nav-button {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 20px 40px;
   background-color: #f0f0f0;
   color: #333;
   text-decoration: none;
@@ -88,7 +88,7 @@ header {
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 60px;
   /* 相対値でフォントサイズを指定 */
   margin-right: 1vw;
   flex-grow: 1;
@@ -107,13 +107,13 @@ header {
 }
 
 .mainLOGO {
-  width: 6vw;
+  width: 160px;
   height: auto;
   margin-right: 1vw;
 }
 
 .menu-item img {
-  width: 4vw;
+  width: 70px;
   height: auto;
 }
 
@@ -130,7 +130,7 @@ display: flex;
 
 }
 .menu-item_y img {
-  width: 6vw;
+  width: 90px;
   height: auto;
 }
 
@@ -149,35 +149,36 @@ display: flex;
 }
 
 .log .A {
-  width: 60%;
+  width: 80%;
   height: auto;
-  border-radius: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 8rem;
+  border-radius: 32px;
+  margin-bottom: 32px;
+  margin-top: 128px;
   position: relative;
 text-align: center;
 }
 
 .log .log1 {
-  font-size: 2.5rem;
+  font-size: 40px;
   position: absolute;
   z-index: 1;
-  height: 58%;
-  top: 19.7%;
-  left: 33%;
+  height: 100px;
+  top: 16%;
+  left: 25%;
 }
 
 .log .log2 {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 24px;
+  /*font-size: 1.2rem;*/
   z-index: 1;
-   text-align: left;
-  left: 31%;
-  top: 30%;
-  height: 58%;
+  text-align: left;
+  left: 25%;
+  top: 26%;
+  height: 60%;
   overflow: scroll;
   overflow: auto;
-  width: 39%;
+  width: 50%;
 }
 
 
@@ -194,29 +195,29 @@ text-align: center;
 }
 
 .daily .A {
-  width: 60%;
+  width: 80%;
   height: auto;
-  margin-top: 10rem;
-  border-radius: 2rem;
-  margin-bottom: 8rem;
+  margin-top: 160px;
+  border-radius: 32px;
+  margin-bottom: 128px;
 }
 
 .Q {
-  font-size: 2.5rem;
+  font-size: 40px;
   position: absolute;
   /* または absolute にするなら親に position: relative を付ける */
   z-index: 1;
-  margin-bottom: 1rem;
-  top: 5%;
-  left: 33%;
+  margin-bottom: 16px;
+  top: 17%;
+  left: 25%;
 }
 
 .twitter{
   position: absolute;
   z-index: 1;
-  top: 20%;
-  left: 25%;
-  width: 40rem;
+  top: 30%;
+  left: 15%;
+  width: 70%;
   height: auto;
   align-items: center;
   flex-direction: column;
@@ -256,7 +257,7 @@ footer {
 
 
 /* スマホ用レイアウト調整 */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
 
   /* ヘッダー関連 */
   header {
@@ -326,17 +327,19 @@ footer {
   .log .log1{
     position: absolute; /* 絶対配置解除 */
     
-   top: 10%;
+   top:9%;
    left: 25%;
-    font-size: 1.2rem;
+    font-size: 20px;
     text-align: left;
   }
 
  .log .log2 {
     position: absolute; /* 絶対配置解除 */
-    width: 90%;
+    width: 60%;
+    height: 60%;
     margin: 0.5rem auto;
-    font-size: 0.45rem;
+    font-size: 16px;
+    /*font-size: 0.45rem;*/
     text-align: left;
     left: 18%;
     top: 25%;
@@ -370,4 +373,3 @@ footer {
     padding: 0.5rem;
   }
 }
-
