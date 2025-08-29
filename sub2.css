@@ -336,7 +336,7 @@ footer {
     position: absolute; /* 絶対配置解除 */
     width: 90%;
     margin: 0.5rem auto;
-    font-size: 0.5rem;
+    font-size: 0.45rem;
     text-align: left;
     left: 18%;
     top: 25%;
@@ -370,3 +370,4 @@ footer {
     padding: 0.5rem;
   }
 }
+
