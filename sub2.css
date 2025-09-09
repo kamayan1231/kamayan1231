@@ -12,21 +12,19 @@ body {
   font-family: sans-serif;
 
   background:
-    linear-gradient(to bottom, rgba(152, 233, 209, 1) 33%, rgba(229, 162, 255, 1)),
+    url('background-img.jpg') no-repeat center top,
+    linear-gradient(to bottom, rgba(152, 233, 209, 1) 33%, rgba(229, 162, 255, 1));
 
-    url('background-img.jpg') no-repeat center top;
-    
-  background-size: cover,80% auto;
+  background-size: 80%, cover;
   /* 画像は60%、グラデーションは全体 */
   background-attachment: scroll, scroll;
   /* スクロールに追従（←ここが重要） */
- background-position: center top, center top;
-  background-repeat: no-repeat, repeat-y;
+  background-repeat: repeat-y;
   /* ← 画像を縦横に繰り返す */
- 
-  
+  min-height: calc(100vh - 1vw);
   padding-bottom: 1vw;
   /* footer分の余白を追加 */
+}
 }
 
 
@@ -373,3 +371,4 @@ footer {
     padding: 0.5rem;
   }
 }
+
